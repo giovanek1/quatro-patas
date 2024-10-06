@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles-fonts.scss';
+@import './styles-vars.scss';
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.text-nunito {
+  font-family: $textNunito;
+}
+
+.text-amatic-sc {
+  font-family: $textAmaticSc;
+}
+
+.text-bold {
+  font-weight: $textBold;
+}
+
+.text-regular {
+  font-weight: $textRegular;
+}
+
+.text-ligth {
+  font-weight: $textLigth;
+}
+
+.text-size-100 {
+  font-size: 100px;
+  line-height: 126px;
+}
+
+.text-size-22 {
+  font-size: 23px;
+  line-height: 30px;
+}
+.text-size-24 {
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.text-size-26 {
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.bg-color-green {
+  background-color: $complementaryGreen;
+}
+.bg-color-pink {
+  background-color: $complementaryPink;
+}
+.bg-color-main {
+  background-color: $primaryPurple;
+}
+.color-main {
+  color: $primaryPurple;
+}
+
+.bg-color-white {
+  background-color: $primaryWhite;
+}
+.color-white {
+  color: $primaryWhite;
+}
+
+.color-gray {
+  color: $complementaryGray;
+}
+
+
+

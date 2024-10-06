@@ -1,0 +1,121 @@
+@import './../../../styles-vars.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 100px 0 200px 0;
+}
+
+.column {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  z-index: 2;
+}
+
+.container-text {
+  width: -webkit-fill-available;
+  min-width: 250px;
+  max-width: 517px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-buttons {
+  display: flex;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 26px;
+    border: solid 2px $primaryPurple;
+    font-family: $textNunito;
+    margin-right: 20px;
+    box-shadow: $shadowBtn;
+    transition: all 100ms ease-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.img {
+  position: absolute;
+  height: 684px;
+  width: fit-content;
+  right: 0;
+  top: -20px;
+  z-index: 1;
+}
+
+.background-image {
+  position: absolute;
+  height: 727px;
+  width: 797px;
+  right: 0;
+  top: 271px;
+  background-image: url('./../../../assets/svg/background-pink.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+}
+
+@media screen and (max-width: 1000px) {
+  :host {
+    margin: 50px 0 100px 0;
+    flex-direction: column-reverse;
+  }
+
+  .column {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .background-image {
+    position: relative;
+    width: 330px;
+    height: 301px;
+    top: auto;
+    align-self: center;
+    background-image: url('./../../../assets/svg/background-pink-mobile.svg');
+  }
+
+  .img {
+    height: 283px;
+    top: -10px;
+    left: 20px;
+  }
+
+  .text-size-100 {
+    font-size: 50px;
+    line-height: 63px;
+  }
+
+  .text-size-24 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-buttons {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    button {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

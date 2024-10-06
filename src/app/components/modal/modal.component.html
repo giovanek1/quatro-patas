@@ -1,0 +1,10 @@
+<div #container class="container">
+  <div class="body {{bgClass}}">
+    <img class="img" [src]="srcImg" [alt]="srcAlt">
+    <div class="content">
+      <span class="title">{{title}}</span>
+      <span class="description">{{description}}</span>
+    </div>
+    <img (click)="close()" class="close" src="./../../../assets/img/close.png" alt="Botão de fechar a modal">
+  </div>
+</div>

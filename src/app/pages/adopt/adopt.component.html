@@ -1,0 +1,30 @@
+<div class="background-image">
+  <img class="img" src="./../../../assets/img/beagle-dog-sitting.png" alt="Cachorro beagle sentado">
+</div>
+<div class="column">
+  <span class="text-amatic-sc text-size-100 text-bold">Adote Agora</span>
+  <div class="container-text">
+    <span class="text-size-24 text-nunito text-regular">Temos vários peludinhos
+      esperando para fazer um lar mais feliz!</span>
+  </div>
+</div>
+<div class="grid">
+  @for (card of adoptService.adoptionCards; track card; let i=$index) {
+  <app-card [srcImg]="card.srcImg" [title]="card.title" [description]="card.description">
+    <div class="container-buttons">
+      <button (click)="handleAction(i, 'isFav', mapIndexModal.isFav)" class="bg-color-white color-main width-btn-fav"
+        [ngClass]="{'btn-check-fav': card.isFav, 'btn-uncheck-fav': !card.isFav}">
+        <img [src]="getIconFav(card.isFav)" alt="Ícone favorito">
+      </button>
+      <button (click)="handleAction(i, 'adopted', mapIndexModal.adopted)" class="width-btn-adopt"
+        [ngClass]="{'bg-color-main color-white': !card.adopted, 'bg-color-white color-main border-btn': card.adopted}">
+        {{card.adopted ? 'Cancelar adoção' : 'Adote agora'}}
+      </button>
+    </div>
+  </app-card>
+  }
+</div>
+@for (modal of adoptService.adoptionModals; track modal) {
+<app-modal [title]="modal.title" [description]="modal.description" [srcImg]="modal.srcImg" [srcAlt]="modal.srcAlt"
+  [bgClass]="modal.bgClass"></app-modal>
+}

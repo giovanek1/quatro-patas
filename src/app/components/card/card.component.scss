@@ -1,0 +1,31 @@
+@import './../../../styles-vars.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: $primaryWhite;
+  box-shadow: 11px 10px 10px 0px rgba(191, 128, 255, 0.25);
+  border-radius: 20px;
+}
+
+.container-img {
+  width: -webkit-fill-available;
+  min-width: 200px;
+  max-width: 450px;
+  height: 255px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 2000px) {
+  .container-img {
+    height: 400px;
+  }
+}

@@ -1,0 +1,96 @@
+@import './../../../styles-vars.scss';
+
+:host {
+  display: flex;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: $primaryWhite;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 100ms ease-out;
+}
+
+.close:hover {
+  opacity: 0.7;
+}
+
+.img {
+  height: 345px;
+  width: fit-content;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 20px;
+}
+
+.title {
+  font-family: $textAmaticSc;
+  font-size: 48px;
+  font-weight: $textBold;
+  line-height: 60px;
+}
+
+.description {
+  font-family: $textNunito;
+  font-size: 26px;
+  font-weight: $textRegular;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    height: 194px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .container {
+    width: 310px;
+  }
+}
